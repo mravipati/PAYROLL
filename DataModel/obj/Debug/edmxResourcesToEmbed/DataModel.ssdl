@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ANil_July_2018Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.COFFAPPROVAL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="COFFAPPROVAL">
+    <Key>
+      <PropertyRef Name="APPLICATIONNO" />
+      <PropertyRef Name="DAY" />
+    </Key>
+    <Property Name="APPLICATIONNO" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="DAY" Type="smalldatetime" Nullable="false" />
+    <Property Name="APPROVED_HRS" Type="float" />
+    <Property Name="APPROVED" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.EMP_WEEKLYOFF' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EMP_WEEKLYOFF">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMP_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="WEEKLY_OFF1" Type="nvarchar" MaxLength="2" />
+    <Property Name="WEEKLY_OFF1_DAYS" Type="nvarchar" MaxLength="20" />
+    <Property Name="WEEKLY_OFF2" Type="nvarchar" MaxLength="2" />
+    <Property Name="WEEKLY_OFF2_DAYS" Type="nvarchar" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="CREATED_BY" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.EMPLOYEELEAVEDETAILS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EMPLOYEELEAVEDETAILS">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+      <PropertyRef Name="YEAR" />
+      <PropertyRef Name="LEAVE_ID" />
+    </Key>
+    <Property Name="EMP_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="YEAR" Type="float" Nullable="false" />
+    <Property Name="LEAVE_ID" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="O_BAL" Type="float" />
+    <Property Name="ACCRUED" Type="float" />
+    <Property Name="UTILIZED" Type="float" />
+    <Property Name="ENCASHED" Type="float" />
+    <Property Name="NO_OF_TIMES" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.EMPLOYEEMASTER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EMPLOYEEMASTER">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+      <PropertyRef Name="TITLE" />
+      <PropertyRef Name="FNAME" />
+      <PropertyRef Name="LNAME" />
+      <PropertyRef Name="EMPLOYMENT_TYPE" />
+      <PropertyRef Name="DOJ" />
+      <PropertyRef Name="SEX" />
+      <PropertyRef Name="DESIGNATION_ID" />
+      <PropertyRef Name="GRADE_ID" />
+      <PropertyRef Name="DEPTNO" />
+      <PropertyRef Name="LOCATION_ID" />
+      <PropertyRef Name="SECTION_ID" />
+      <PropertyRef Name="PAYMENT_BY" />
+      <PropertyRef Name="WEEKLY_OFF" />
+      <PropertyRef Name="MARRIED" />
+      <PropertyRef Name="STATUS" />
+    </Key>
+    <Property Name="EMP_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="FNAME" Type="nvarchar" MaxLength="17" Nullable="false" />
+    <Property Name="MNAME" Type="nvarchar" MaxLength="25" />
+    <Property Name="LNAME" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="EMPLOYMENT_TYPE" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="DOJ" Type="datetime" Nullable="false" />
+    <Property Name="SEX" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="DESIGNATION_ID" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="GRADE_ID" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="DEPTNO" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="LOCATION_ID" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="SECTION_ID" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="BASIC_SAL" Type="float" />
+    <Property Name="PAYMENT_BY" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="WEEKLY_OFF" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="CONTRACT_ID" Type="nvarchar" MaxLength="6" />
+    <Property Name="DATE_OF_RESIG_TERMIN" Type="datetime" />
+    <Property Name="RESIGN_ON" Type="datetime" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="ADDRESS" Type="nvarchar" MaxLength="500" />
+    <Property Name="MARRIED" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="NOMINEE_NAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="NOMINEE_ADDRESS" Type="nvarchar" MaxLength="250" />
+    <Property Name="RELATION" Type="nvarchar" MaxLength="20" />
+    <Property Name="PHONE_NO" Type="nvarchar" MaxLength="20" />
+    <Property Name="PASSPORT_NO" Type="nvarchar" MaxLength="20" />
+    <Property Name="SKILLED_UNSKILLED" Type="nvarchar" MaxLength="1" />
+    <Property Name="STATUS" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="OT_RATE" Type="float" />
+    <Property Name="ESIAPPLICABLE" Type="nvarchar" MaxLength="1" />
+    <Property Name="PFAPPLICABLE" Type="nvarchar" MaxLength="1" />
+    <Property Name="ESINO" Type="nvarchar" MaxLength="25" />
+    <Property Name="PFNO" Type="nvarchar" MaxLength="25" />
+    <Property Name="ACCOUNTNO" Type="nvarchar" MaxLength="20" />
+    <Property Name="BANKNAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="SERIALNO" Type="nvarchar" MaxLength="50" />
+    <Property Name="LOGINID" Type="nvarchar" MaxLength="20" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="200" />
+    <Property Name="MGRID" Type="nvarchar" MaxLength="20" />
+    <Property Name="PAY_CODE" Type="nvarchar" MaxLength="6" />
+    <Property Name="OT_ID" Type="nvarchar" MaxLength="6" />
+    <Property Name="LATE_ID" Type="nvarchar" MaxLength="6" />
+    <Property Name="CHEQUE_NO" Type="nvarchar" MaxLength="20" />
+    <Property Name="CHEQUE_DATE" Type="datetime" />
+    <Property Name="PTAPPLICABLE" Type="nvarchar" MaxLength="1" />
+    <Property Name="ESIDATE" Type="nvarchar" MaxLength="17" />
+    <Property Name="EMAIL_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMPPHOTO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PHONE_OFF" Type="nvarchar" MaxLength="20" />
+    <Property Name="EXT" Type="nvarchar" MaxLength="5" />
+    <Property Name="MOBILENO" Type="nvarchar" MaxLength="25" />
+    <Property Name="BYALPHA" Type="nvarchar" MaxLength="15" />
+    <Property Name="BYNUMBER" Type="float" />
+    <Property Name="UNIONID" Type="nvarchar" MaxLength="6" />
+    <Property Name="HRID" Type="float" />
+    <Property Name="JMONTH" Type="datetime" />
+    <Property Name="RMONTH" Type="datetime" />
+    <Property Name="COID" Type="nvarchar" MaxLength="15" />
+    <Property Name="JVLOC_ID" Type="nvarchar" MaxLength="6" />
+    <Property Name="PhotoData" Type="image" />
+    <Property Name="CDesigID" Type="varchar" MaxLength="20" />
+    <Property Name="Aadhaar" Type="varchar" MaxLength="16" />
+    <Property Name="AEID" Type="varchar" MaxLength="16" />
+    <Property Name="emPhone" Type="nvarchar" MaxLength="13" />
+    <Property Name="emContact" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERMANENTADDRESS" Type="nvarchar" MaxLength="500" />
+    <Property Name="leaveauthority" Type="varchar" MaxLength="20" />
+    <Property Name="PANNO" Type="varchar" MaxLength="20" />
+    <Property Name="PASSWORD_CHANGE_DATE" Type="datetime" />
+    <Property Name="FAILURE_ATTEMPTS" Type="int" />
+    <Property Name="IS_LOCKED" Type="bit" />
+    <Property Name="EPSApplicable" Type="varchar" MaxLength="1" />
+    <Property Name="dtFinalSettlement" Type="date" />
+    <Property Name="hiQual" Type="numeric" Precision="2" Scale="0" />
+    <Property Name="Handicap" Type="numeric" Precision="2" Scale="0" />
+    <Property Name="IFSCCODE" Type="varchar" MaxLength="11" />
+    <Property Name="ESI_END_MONTH" Type="datetime" />
+    <Property Name="BANK_BRANCH" Type="nvarchar" MaxLength="60" />
+    <Property Name="SSID" Type="nvarchar" MaxLength="30" />
+    <Property Name="annualsalary" Type="float" />
+    <Property Name="weekly_off1" Type="nvarchar" MaxLength="12" />
+    <Property Name="Passport_Date" Type="datetime" />
+    <Property Name="IsTrgerFired" Type="varchar" MaxLength="20" />
+    <Property Name="ReasonForResign" Type="nvarchar" MaxLength="500" />
+    <Property Name="PersonalEmail" Type="nvarchar" MaxLength="150" />
+    <Property Name="Address_change_date" Type="datetime" />
+    <Property Name="CTC_PERIOD" Type="varchar" MaxLength="20" />
+    <Property Name="created_date" Type="datetime" />
+    <Property Name="created_by" Type="varchar" MaxLength="50" />
+    <Property Name="FNF_STATUS" Type="varchar" MaxLength="20" />
+    <Property Name="NPS_APPLICABLE" Type="varchar" MaxLength="1" />
+    <Property Name="NPS_PERCENTAGE" Type="float" />
+    <Property Name="PortalAccessble" Type="varchar" MaxLength="1" />
+    <Property Name="SwipeAttendance" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmergencyRelation" Type="nvarchar" MaxLength="50" />
+    <Property Name="BeneficiaryName" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.ENCASHPROCESS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ENCASHPROCESS">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+      <PropertyRef Name="MONTH" />
+    </Key>
+    <Property Name="EMP_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MONTH" Type="smalldatetime" Nullable="false" />
+    <Property Name="ENCASHMENT_DAYS" Type="float" />
+    <Property Name="PREF1" Type="nvarchar" MaxLength="6" />
+    <Property Name="PREF2" Type="nvarchar" MaxLength="6" />
+    <Property Name="PREF3" Type="nvarchar" MaxLength="6" />
+    <Property Name="DAYS_DEDUCT1" Type="float" />
+    <Property Name="DAYS_DEDUCT2" Type="float" />
+    <Property Name="DAYS_DEDUCT3" Type="float" />
+    <Property Name="EPREF1" Type="nvarchar" MaxLength="6" />
+    <Property Name="EPREF2" Type="nvarchar" MaxLength="6" />
+    <Property Name="EPREF3" Type="nvarchar" MaxLength="6" />
+    <Property Name="EDAYS_DEDUCT1" Type="float" />
+    <Property Name="EDAYS_DEDUCT2" Type="float" />
+    <Property Name="EDAYS_DEDUCT3" Type="float" />
+    <Property Name="PAYPERIODSTART" Type="smalldatetime" />
+    <Property Name="PAYPERIODEND" Type="smalldatetime" />
+    <Property Name="ATTENSTART" Type="smalldatetime" />
+    <Property Name="ATTENEND" Type="smalldatetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.LEAVEAPPAPPROVAL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LEAVEAPPAPPROVAL">
+    <Key>
+      <PropertyRef Name="APPLICATION_NO" />
+      <PropertyRef Name="LEAVETYPE" />
+      <PropertyRef Name="DATE_FROM" />
+      <PropertyRef Name="DATE_TO" />
+      <PropertyRef Name="APPROVED" />
+    </Key>
+    <Property Name="APPLICATION_NO" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="EMP_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="APPL_DATE" Type="smalldatetime" />
+    <Property Name="LEAVETYPE" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="DATE_FROM" Type="smalldatetime" Nullable="false" />
+    <Property Name="DATE_TO" Type="smalldatetime" Nullable="false" />
+    <Property Name="APPROVED" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="APPROVED_DATE" Type="smalldatetime" />
+    <Property Name="APPROVED_BY" Type="nvarchar" MaxLength="20" />
+    <Property Name="MSGNO" Type="float" />
+    <Property Name="REMARKS" Type="nvarchar" MaxLength="100" />
+    <Property Name="AUTHORIZEDBY" Type="nvarchar" MaxLength="50" />
+    <Property Name="HALF2ND" Type="nvarchar" MaxLength="1" />
+    <Property Name="HALF1ST" Type="nvarchar" MaxLength="1" />
+    <Property Name="MOD_CAN" Type="nvarchar" MaxLength="2" />
+    <Property Name="Attachment" Type="nvarchar" MaxLength="100" />
+    <Property Name="RejectReason" Type="nvarchar(max)" />
+    <Property Name="ModifiedBY" Type="nvarchar" MaxLength="20" />
+    <Property Name="ModifyRemarks" Type="nvarchar" MaxLength="400" />
+    <Property Name="NoOfDays" Type="float" />
+    <Property Name="BulkApproved" Type="varchar" MaxLength="100" />
+    <Property Name="App_Year" Type="nvarchar" MaxLength="20" />
+    <Property Name="Subordinates" Type="nvarchar(max)" />
+    <Property Name="AutoInsert" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.LEAVEENCASHMENT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LEAVEENCASHMENT">
+    <Key>
+      <PropertyRef Name="APP_NO" />
+      <PropertyRef Name="DATE1" />
+      <PropertyRef Name="EMP_ID" />
+      <PropertyRef Name="LEAVE_TYPE" />
+      <PropertyRef Name="ENCASHING_DAYS" />
+      <PropertyRef Name="REMARKS" />
+    </Key>
+    <Property Name="APP_NO" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="DATE1" Type="smalldatetime" Nullable="false" />
+    <Property Name="EMP_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LEAVE_TYPE" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="ENCASHING_DAYS" Type="float" Nullable="false" />
+    <Property Name="APPROVED" Type="nvarchar" MaxLength="1" />
+    <Property Name="APPROVEDBY" Type="nvarchar" MaxLength="20" />
+    <Property Name="REMARKS" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="MONTHENCASHED" Type="smalldatetime" />
+    <Property Name="MSGNO" Type="float" />
+    <Property Name="APPROVEDDATE" Type="smalldatetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.LEAVEGRADELINK' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LEAVEGRADELINK">
+    <Key>
+      <PropertyRef Name="LEAVEID" />
+      <PropertyRef Name="GRADEID" />
+      <PropertyRef Name="EFFECTDATE" />
+    </Key>
+    <Property Name="LEAVEID" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="GRADEID" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="EFFECTDATE" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.LEAVEMASTER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LEAVEMASTER">
+    <Key>
+      <PropertyRef Name="LEAVE_ID" />
+      <PropertyRef Name="LEAVE_DESCRIPTION" />
+      <PropertyRef Name="ENCASHABLE" />
+      <PropertyRef Name="CARRY_FORWARD" />
+      <PropertyRef Name="YEARS" />
+      <PropertyRef Name="DAYS" />
+      <PropertyRef Name="ACC_BEFORE_PERIOD" />
+      <PropertyRef Name="ACC_AFTER_PERIOD" />
+      <PropertyRef Name="YEARLY" />
+      <PropertyRef Name="MONTHLY" />
+      <PropertyRef Name="NO_OF_DAYS" />
+      <PropertyRef Name="EFFECTDATE" />
+    </Key>
+    <Property Name="LEAVE_ID" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="LEAVE_DESCRIPTION" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ENCASHABLE" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="CARRY_FORWARD" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="YEARS" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="DAYS" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="DAYS_YEARS" Type="float" />
+    <Property Name="ACC_BEFORE_PERIOD" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="ACC_AFTER_PERIOD" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="YEARLY" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="MONTHLY" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="NO_OF_DAYS" Type="float" Nullable="false" />
+    <Property Name="APPTO" Type="nvarchar" MaxLength="75" />
+    <Property Name="APPLICABLETO" Type="nvarchar" MaxLength="6" />
+    <Property Name="APPLICABLE_TO" Type="nvarchar" MaxLength="6" />
+    <Property Name="ELIGIBILITY" Type="nvarchar" MaxLength="1" />
+    <Property Name="MIN_BAL_DAYS" Type="float" />
+    <Property Name="MAX_ENCASH_DAYS" Type="float" />
+    <Property Name="MIN_NO_OF_DAYS" Type="float" />
+    <Property Name="MAX_NO_OF_DAYS" Type="float" />
+    <Property Name="EFFECTDATE" Type="datetime" Nullable="false" />
+    <Property Name="MAX_LEAVE_MON" Type="float" />
+    <Property Name="MAX_LEAVE_TIME" Type="float" />
+    <Property Name="NEGA_LEAVE_ACCRUED" Type="nvarchar" MaxLength="1" />
+    <Property Name="MIN_ENCDAYS_ACCRUED" Type="float" />
+    <Property Name="LTID" Type="float" />
+    <Property Name="PAIDLEAVE" Type="nvarchar" MaxLength="1" />
+    <Property Name="FORMULA" Type="nvarchar" MaxLength="1" />
+    <Property Name="ACC_ELIGIBILITY" Type="nvarchar" MaxLength="255" />
+    <Property Name="ACC_CAL" Type="nvarchar" MaxLength="255" />
+    <Property Name="ELIGIBILITY_DAYS" Type="float" />
+    <Property Name="ACC_DAYS" Type="float" />
+    <Property Name="ROUNDDAYS" Type="float" />
+    <Property Name="PERDAY" Type="nvarchar" MaxLength="1" />
+    <Property Name="Embed" Type="nvarchar" MaxLength="1" />
+    <Property Name="AutoEncash" Type="nvarchar" MaxLength="1" />
+    <Property Name="accrualLimit" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="Quarterly" Type="nvarchar" MaxLength="1" />
+    <Property Name="Anniversary" Type="nvarchar" MaxLength="20" />
+    <Property Name="MAX_LEAVEAccept_MONTH" Type="float" />
+    <Property Name="UploadDocument" Type="bit" />
+    <Property Name="DocumentReqDays" Type="int" />
+    <Property Name="CompOffExpDays" Type="int" />
+    <Property Name="CompOffUtiliseApproveFlag" Type="nvarchar" MaxLength="20" />
+    <Property Name="IsCompOffType" Type="bit" />
+    <Property Name="MinLeavesPerRequest" Type="float" />
+    <Property Name="MaxLeavesPerRequest" Type="float" />
+    <Property Name="MaxLeavesPerYear" Type="float" />
+    <Property Name="LeavesCombinationAfter" Type="varchar(max)" />
+    <Property Name="DaysGapAfterLeave" Type="float" />
+    <Property Name="Before15" Type="nvarchar" MaxLength="20" />
+    <Property Name="After15" Type="nvarchar" MaxLength="20" />
+    <Property Name="HalfYearly" Type="nvarchar" MaxLength="2" />
+    <Property Name="IsMailReqForSecondManager" Type="nvarchar" MaxLength="2" />
+    <Property Name="EMBED_PREFIX" Type="nvarchar" MaxLength="2" />
+    <Property Name="EMBED_SUFFIX" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.linkLeaveLoc' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="linkLeaveLoc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LeaveID" Type="varchar" MaxLength="20" />
+    <Property Name="LocID" Type="varchar" MaxLength="20" />
+    <Property Name="EffectDate" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.MONTHEND_LEAVEBAL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MONTHEND_LEAVEBAL">
+    <Key>
+      <PropertyRef Name="MONTH" />
+      <PropertyRef Name="LEAVE_ID" />
+      <PropertyRef Name="START_CLOSE" />
+    </Key>
+    <Property Name="EMP_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="MONTH" Type="datetime" Nullable="false" />
+    <Property Name="LEAVE_ID" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="START_CLOSE" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="O_BAL" Type="float" />
+    <Property Name="ACCRUED" Type="float" />
+    <Property Name="UTILIZED" Type="float" />
+    <Property Name="ENCASHED" Type="float" />
+    <Property Name="AUTILIZED" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.MONTHLYATTENDANCE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MONTHLYATTENDANCE">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+      <PropertyRef Name="MONTH" />
+      <PropertyRef Name="TOTAL_DAYS" />
+      <PropertyRef Name="NO_OF_WORKING_DAYS" />
+      <PropertyRef Name="DAYS_WORKED" />
+    </Key>
+    <Property Name="EMP_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MONTH" Type="datetime" Nullable="false" />
+    <Property Name="TOTAL_DAYS" Type="float" Nullable="false" />
+    <Property Name="NO_OF_WORKING_DAYS" Type="float" Nullable="false" />
+    <Property Name="DAYS_WORKED" Type="float" Nullable="false" />
+    <Property Name="SPECIAL_SHIFT" Type="nvarchar" MaxLength="8" />
+    <Property Name="LATE_DAYS" Type="float" />
+    <Property Name="OT_HOURS" Type="float" />
+    <Property Name="LATE_DAYS1" Type="float" />
+    <Property Name="LATE_DAYS2" Type="float" />
+    <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+    <Property Name="PUNCH_FLAG" Type="nvarchar" MaxLength="1" />
+    <Property Name="LOSS_OF_PAY" Type="float" />
+    <Property Name="SHIFT_DAYS" Type="float" />
+    <Property Name="EARLYDAYS1" Type="float" />
+    <Property Name="EARLYDAYS2" Type="float" />
+    <Property Name="EARLYDAYS3" Type="float" />
+    <Property Name="LDEDUCTDAYS" Type="float" />
+    <Property Name="EDEDUCTDAYS" Type="float" />
+    <Property Name="NOJDEDUCTDAYS" Type="float" />
+    <Property Name="LATEDAYSDEDUCT" Type="float" />
+    <Property Name="EARLYDAYSDEDUCT" Type="float" />
+    <Property Name="VERSIONFLAG" Type="nvarchar" MaxLength="3" />
+    <Property Name="WOFFOTHRS" Type="float" />
+    <Property Name="HOLOTHRS" Type="float" />
+    <Property Name="WOFFDAYS" Type="float" />
+    <Property Name="HOLIDAYS" Type="float" />
+    <Property Name="PAY_TDAYS" Type="float" />
+    <Property Name="STATUS" Type="nchar" MaxLength="20" />
+    <Property Name="IncentiveHrs" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="LEAVES" Type="float" />
+    <Property Name="UnpaidLeave" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.OTCOFFHRS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OTCOFFHRS">
+    <Key>
+      <PropertyRef Name="EMPID" />
+      <PropertyRef Name="DAY" />
+    </Key>
+    <Property Name="EMPID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DAY" Type="smalldatetime" Nullable="false" />
+    <Property Name="ACTUALHRS" Type="float" />
+    <Property Name="BALHRS" Type="float" />
+    <Property Name="FLAG" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.PAYPERIODDEFINITION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PAYPERIODDEFINITION">
+    <Key>
+      <PropertyRef Name="PAY_CODE" />
+      <PropertyRef Name="PAY_FROMDATE" />
+    </Key>
+    <Property Name="PAY_CODE" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="CLOSING_DATE" Type="float" />
+    <Property Name="PAY_DATE" Type="float" />
+    <Property Name="PAY_FROMDATE" Type="smalldatetime" Nullable="false" />
+    <Property Name="SAL_DATE" Type="float" />
+    <Property Name="ATTEN_DATE" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ANil_July_2018.dbo.Payroll_LOG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Payroll_LOG">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SelMonth" Type="varchar" MaxLength="20" />
+    <Property Name="type1" Type="varchar" MaxLength="2" />
+    <Property Name="server1" Type="varchar" MaxLength="50" />
+    <Property Name="database1" Type="varchar" MaxLength="50" />
+    <Property Name="dbUName" Type="varchar" MaxLength="50" />
+    <Property Name="dbPass" Type="varchar" MaxLength="50" />
+    <Property Name="SelectedEmployees" Type="varchar(max)" />
+    <Property Name="ByRef" Type="varchar(max)" />
+    <Property Name="Source" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="ANil_July_2018ModelStoreContainer">
+    <EntitySet Name="COFFAPPROVAL" EntityType="Self.COFFAPPROVAL" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [COFFAPPROVAL].[APPLICATIONNO] AS [APPLICATIONNO], 
+    [COFFAPPROVAL].[DAY] AS [DAY], 
+    [COFFAPPROVAL].[APPROVED_HRS] AS [APPROVED_HRS], 
+    [COFFAPPROVAL].[APPROVED] AS [APPROVED]
+    FROM [dbo].[COFFAPPROVAL] AS [COFFAPPROVAL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EMP_WEEKLYOFF" EntityType="Self.EMP_WEEKLYOFF" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EMP_WEEKLYOFF].[ID] AS [ID], 
+    [EMP_WEEKLYOFF].[EMP_ID] AS [EMP_ID], 
+    [EMP_WEEKLYOFF].[WEEKLY_OFF1] AS [WEEKLY_OFF1], 
+    [EMP_WEEKLYOFF].[WEEKLY_OFF1_DAYS] AS [WEEKLY_OFF1_DAYS], 
+    [EMP_WEEKLYOFF].[WEEKLY_OFF2] AS [WEEKLY_OFF2], 
+    [EMP_WEEKLYOFF].[WEEKLY_OFF2_DAYS] AS [WEEKLY_OFF2_DAYS], 
+    [EMP_WEEKLYOFF].[CREATED_DATE] AS [CREATED_DATE], 
+    [EMP_WEEKLYOFF].[CREATED_BY] AS [CREATED_BY]
+    FROM [dbo].[EMP_WEEKLYOFF] AS [EMP_WEEKLYOFF]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EMPLOYEELEAVEDETAILS" EntityType="Self.EMPLOYEELEAVEDETAILS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EMPLOYEELEAVEDETAILS].[EMP_ID] AS [EMP_ID], 
+    [EMPLOYEELEAVEDETAILS].[YEAR] AS [YEAR], 
+    [EMPLOYEELEAVEDETAILS].[LEAVE_ID] AS [LEAVE_ID], 
+    [EMPLOYEELEAVEDETAILS].[O_BAL] AS [O_BAL], 
+    [EMPLOYEELEAVEDETAILS].[ACCRUED] AS [ACCRUED], 
+    [EMPLOYEELEAVEDETAILS].[UTILIZED] AS [UTILIZED], 
+    [EMPLOYEELEAVEDETAILS].[ENCASHED] AS [ENCASHED], 
+    [EMPLOYEELEAVEDETAILS].[NO_OF_TIMES] AS [NO_OF_TIMES]
+    FROM [dbo].[EMPLOYEELEAVEDETAILS] AS [EMPLOYEELEAVEDETAILS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EMPLOYEEMASTER" EntityType="Self.EMPLOYEEMASTER" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EMPLOYEEMASTER].[EMP_ID] AS [EMP_ID], 
+    [EMPLOYEEMASTER].[TITLE] AS [TITLE], 
+    [EMPLOYEEMASTER].[FNAME] AS [FNAME], 
+    [EMPLOYEEMASTER].[MNAME] AS [MNAME], 
+    [EMPLOYEEMASTER].[LNAME] AS [LNAME], 
+    [EMPLOYEEMASTER].[EMPLOYMENT_TYPE] AS [EMPLOYMENT_TYPE], 
+    [EMPLOYEEMASTER].[DOJ] AS [DOJ], 
+    [EMPLOYEEMASTER].[SEX] AS [SEX], 
+    [EMPLOYEEMASTER].[DESIGNATION_ID] AS [DESIGNATION_ID], 
+    [EMPLOYEEMASTER].[GRADE_ID] AS [GRADE_ID], 
+    [EMPLOYEEMASTER].[DEPTNO] AS [DEPTNO], 
+    [EMPLOYEEMASTER].[LOCATION_ID] AS [LOCATION_ID], 
+    [EMPLOYEEMASTER].[SECTION_ID] AS [SECTION_ID], 
+    [EMPLOYEEMASTER].[BASIC_SAL] AS [BASIC_SAL], 
+    [EMPLOYEEMASTER].[PAYMENT_BY] AS [PAYMENT_BY], 
+    [EMPLOYEEMASTER].[WEEKLY_OFF] AS [WEEKLY_OFF], 
+    [EMPLOYEEMASTER].[CONTRACT_ID] AS [CONTRACT_ID], 
+    [EMPLOYEEMASTER].[DATE_OF_RESIG_TERMIN] AS [DATE_OF_RESIG_TERMIN], 
+    [EMPLOYEEMASTER].[RESIGN_ON] AS [RESIGN_ON], 
+    [EMPLOYEEMASTER].[DOB] AS [DOB], 
+    [EMPLOYEEMASTER].[ADDRESS] AS [ADDRESS], 
+    [EMPLOYEEMASTER].[MARRIED] AS [MARRIED], 
+    [EMPLOYEEMASTER].[NOMINEE_NAME] AS [NOMINEE_NAME], 
+    [EMPLOYEEMASTER].[NOMINEE_ADDRESS] AS [NOMINEE_ADDRESS], 
+    [EMPLOYEEMASTER].[RELATION] AS [RELATION], 
+    [EMPLOYEEMASTER].[PHONE_NO] AS [PHONE_NO], 
+    [EMPLOYEEMASTER].[PASSPORT_NO] AS [PASSPORT_NO], 
+    [EMPLOYEEMASTER].[SKILLED_UNSKILLED] AS [SKILLED_UNSKILLED], 
+    [EMPLOYEEMASTER].[STATUS] AS [STATUS], 
+    [EMPLOYEEMASTER].[OT_RATE] AS [OT_RATE], 
+    [EMPLOYEEMASTER].[ESIAPPLICABLE] AS [ESIAPPLICABLE], 
+    [EMPLOYEEMASTER].[PFAPPLICABLE] AS [PFAPPLICABLE], 
+    [EMPLOYEEMASTER].[ESINO] AS [ESINO], 
+    [EMPLOYEEMASTER].[PFNO] AS [PFNO], 
+    [EMPLOYEEMASTER].[ACCOUNTNO] AS [ACCOUNTNO], 
+    [EMPLOYEEMASTER].[BANKNAME] AS [BANKNAME], 
+    [EMPLOYEEMASTER].[SERIALNO] AS [SERIALNO], 
+    [EMPLOYEEMASTER].[LOGINID] AS [LOGINID], 
+    [EMPLOYEEMASTER].[PASSWORD] AS [PASSWORD], 
+    [EMPLOYEEMASTER].[MGRID] AS [MGRID], 
+    [EMPLOYEEMASTER].[PAY_CODE] AS [PAY_CODE], 
+    [EMPLOYEEMASTER].[OT_ID] AS [OT_ID], 
+    [EMPLOYEEMASTER].[LATE_ID] AS [LATE_ID], 
+    [EMPLOYEEMASTER].[CHEQUE_NO] AS [CHEQUE_NO], 
+    [EMPLOYEEMASTER].[CHEQUE_DATE] AS [CHEQUE_DATE], 
+    [EMPLOYEEMASTER].[PTAPPLICABLE] AS [PTAPPLICABLE], 
+    [EMPLOYEEMASTER].[ESIDATE] AS [ESIDATE], 
+    [EMPLOYEEMASTER].[EMAIL_ID] AS [EMAIL_ID], 
+    [EMPLOYEEMASTER].[EMPPHOTO] AS [EMPPHOTO], 
+    [EMPLOYEEMASTER].[PHONE_OFF] AS [PHONE_OFF], 
+    [EMPLOYEEMASTER].[EXT] AS [EXT], 
+    [EMPLOYEEMASTER].[MOBILENO] AS [MOBILENO], 
+    [EMPLOYEEMASTER].[BYALPHA] AS [BYALPHA], 
+    [EMPLOYEEMASTER].[BYNUMBER] AS [BYNUMBER], 
+    [EMPLOYEEMASTER].[UNIONID] AS [UNIONID], 
+    [EMPLOYEEMASTER].[HRID] AS [HRID], 
+    [EMPLOYEEMASTER].[JMONTH] AS [JMONTH], 
+    [EMPLOYEEMASTER].[RMONTH] AS [RMONTH], 
+    [EMPLOYEEMASTER].[COID] AS [COID], 
+    [EMPLOYEEMASTER].[JVLOC_ID] AS [JVLOC_ID], 
+    [EMPLOYEEMASTER].[PhotoData] AS [PhotoData], 
+    [EMPLOYEEMASTER].[CDesigID] AS [CDesigID], 
+    [EMPLOYEEMASTER].[Aadhaar] AS [Aadhaar], 
+    [EMPLOYEEMASTER].[AEID] AS [AEID], 
+    [EMPLOYEEMASTER].[emPhone] AS [emPhone], 
+    [EMPLOYEEMASTER].[emContact] AS [emContact], 
+    [EMPLOYEEMASTER].[PERMANENTADDRESS] AS [PERMANENTADDRESS], 
+    [EMPLOYEEMASTER].[leaveauthority] AS [leaveauthority], 
+    [EMPLOYEEMASTER].[PANNO] AS [PANNO], 
+    [EMPLOYEEMASTER].[PASSWORD_CHANGE_DATE] AS [PASSWORD_CHANGE_DATE], 
+    [EMPLOYEEMASTER].[FAILURE_ATTEMPTS] AS [FAILURE_ATTEMPTS], 
+    [EMPLOYEEMASTER].[IS_LOCKED] AS [IS_LOCKED], 
+    [EMPLOYEEMASTER].[EPSApplicable] AS [EPSApplicable], 
+    [EMPLOYEEMASTER].[dtFinalSettlement] AS [dtFinalSettlement], 
+    [EMPLOYEEMASTER].[hiQual] AS [hiQual], 
+    [EMPLOYEEMASTER].[Handicap] AS [Handicap], 
+    [EMPLOYEEMASTER].[IFSCCODE] AS [IFSCCODE], 
+    [EMPLOYEEMASTER].[ESI_END_MONTH] AS [ESI_END_MONTH], 
+    [EMPLOYEEMASTER].[BANK_BRANCH] AS [BANK_BRANCH], 
+    [EMPLOYEEMASTER].[SSID] AS [SSID], 
+    [EMPLOYEEMASTER].[annualsalary] AS [annualsalary], 
+    [EMPLOYEEMASTER].[weekly_off1] AS [weekly_off1], 
+    [EMPLOYEEMASTER].[Passport_Date] AS [Passport_Date], 
+    [EMPLOYEEMASTER].[IsTrgerFired] AS [IsTrgerFired], 
+    [EMPLOYEEMASTER].[ReasonForResign] AS [ReasonForResign], 
+    [EMPLOYEEMASTER].[PersonalEmail] AS [PersonalEmail], 
+    [EMPLOYEEMASTER].[Address_change_date] AS [Address_change_date], 
+    [EMPLOYEEMASTER].[CTC_PERIOD] AS [CTC_PERIOD], 
+    [EMPLOYEEMASTER].[created_date] AS [created_date], 
+    [EMPLOYEEMASTER].[created_by] AS [created_by], 
+    [EMPLOYEEMASTER].[FNF_STATUS] AS [FNF_STATUS], 
+    [EMPLOYEEMASTER].[NPS_APPLICABLE] AS [NPS_APPLICABLE], 
+    [EMPLOYEEMASTER].[NPS_PERCENTAGE] AS [NPS_PERCENTAGE], 
+    [EMPLOYEEMASTER].[PortalAccessble] AS [PortalAccessble], 
+    [EMPLOYEEMASTER].[SwipeAttendance] AS [SwipeAttendance], 
+    [EMPLOYEEMASTER].[EmergencyRelation] AS [EmergencyRelation], 
+    [EMPLOYEEMASTER].[BeneficiaryName] AS [BeneficiaryName]
+    FROM [dbo].[EMPLOYEEMASTER] AS [EMPLOYEEMASTER]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ENCASHPROCESS" EntityType="Self.ENCASHPROCESS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ENCASHPROCESS].[EMP_ID] AS [EMP_ID], 
+    [ENCASHPROCESS].[MONTH] AS [MONTH], 
+    [ENCASHPROCESS].[ENCASHMENT_DAYS] AS [ENCASHMENT_DAYS], 
+    [ENCASHPROCESS].[PREF1] AS [PREF1], 
+    [ENCASHPROCESS].[PREF2] AS [PREF2], 
+    [ENCASHPROCESS].[PREF3] AS [PREF3], 
+    [ENCASHPROCESS].[DAYS_DEDUCT1] AS [DAYS_DEDUCT1], 
+    [ENCASHPROCESS].[DAYS_DEDUCT2] AS [DAYS_DEDUCT2], 
+    [ENCASHPROCESS].[DAYS_DEDUCT3] AS [DAYS_DEDUCT3], 
+    [ENCASHPROCESS].[EPREF1] AS [EPREF1], 
+    [ENCASHPROCESS].[EPREF2] AS [EPREF2], 
+    [ENCASHPROCESS].[EPREF3] AS [EPREF3], 
+    [ENCASHPROCESS].[EDAYS_DEDUCT1] AS [EDAYS_DEDUCT1], 
+    [ENCASHPROCESS].[EDAYS_DEDUCT2] AS [EDAYS_DEDUCT2], 
+    [ENCASHPROCESS].[EDAYS_DEDUCT3] AS [EDAYS_DEDUCT3], 
+    [ENCASHPROCESS].[PAYPERIODSTART] AS [PAYPERIODSTART], 
+    [ENCASHPROCESS].[PAYPERIODEND] AS [PAYPERIODEND], 
+    [ENCASHPROCESS].[ATTENSTART] AS [ATTENSTART], 
+    [ENCASHPROCESS].[ATTENEND] AS [ATTENEND]
+    FROM [dbo].[ENCASHPROCESS] AS [ENCASHPROCESS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LEAVEAPPAPPROVAL" EntityType="Self.LEAVEAPPAPPROVAL" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LEAVEAPPAPPROVAL].[APPLICATION_NO] AS [APPLICATION_NO], 
+    [LEAVEAPPAPPROVAL].[EMP_ID] AS [EMP_ID], 
+    [LEAVEAPPAPPROVAL].[APPL_DATE] AS [APPL_DATE], 
+    [LEAVEAPPAPPROVAL].[LEAVETYPE] AS [LEAVETYPE], 
+    [LEAVEAPPAPPROVAL].[DATE_FROM] AS [DATE_FROM], 
+    [LEAVEAPPAPPROVAL].[DATE_TO] AS [DATE_TO], 
+    [LEAVEAPPAPPROVAL].[APPROVED] AS [APPROVED], 
+    [LEAVEAPPAPPROVAL].[APPROVED_DATE] AS [APPROVED_DATE], 
+    [LEAVEAPPAPPROVAL].[APPROVED_BY] AS [APPROVED_BY], 
+    [LEAVEAPPAPPROVAL].[MSGNO] AS [MSGNO], 
+    [LEAVEAPPAPPROVAL].[REMARKS] AS [REMARKS], 
+    [LEAVEAPPAPPROVAL].[AUTHORIZEDBY] AS [AUTHORIZEDBY], 
+    [LEAVEAPPAPPROVAL].[HALF2ND] AS [HALF2ND], 
+    [LEAVEAPPAPPROVAL].[HALF1ST] AS [HALF1ST], 
+    [LEAVEAPPAPPROVAL].[MOD_CAN] AS [MOD_CAN], 
+    [LEAVEAPPAPPROVAL].[Attachment] AS [Attachment], 
+    [LEAVEAPPAPPROVAL].[RejectReason] AS [RejectReason], 
+    [LEAVEAPPAPPROVAL].[ModifiedBY] AS [ModifiedBY], 
+    [LEAVEAPPAPPROVAL].[ModifyRemarks] AS [ModifyRemarks], 
+    [LEAVEAPPAPPROVAL].[NoOfDays] AS [NoOfDays], 
+    [LEAVEAPPAPPROVAL].[BulkApproved] AS [BulkApproved], 
+    [LEAVEAPPAPPROVAL].[App_Year] AS [App_Year], 
+    [LEAVEAPPAPPROVAL].[Subordinates] AS [Subordinates], 
+    [LEAVEAPPAPPROVAL].[AutoInsert] AS [AutoInsert]
+    FROM [dbo].[LEAVEAPPAPPROVAL] AS [LEAVEAPPAPPROVAL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LEAVEENCASHMENT" EntityType="Self.LEAVEENCASHMENT" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LEAVEENCASHMENT].[APP_NO] AS [APP_NO], 
+    [LEAVEENCASHMENT].[DATE1] AS [DATE1], 
+    [LEAVEENCASHMENT].[EMP_ID] AS [EMP_ID], 
+    [LEAVEENCASHMENT].[LEAVE_TYPE] AS [LEAVE_TYPE], 
+    [LEAVEENCASHMENT].[ENCASHING_DAYS] AS [ENCASHING_DAYS], 
+    [LEAVEENCASHMENT].[APPROVED] AS [APPROVED], 
+    [LEAVEENCASHMENT].[APPROVEDBY] AS [APPROVEDBY], 
+    [LEAVEENCASHMENT].[REMARKS] AS [REMARKS], 
+    [LEAVEENCASHMENT].[MONTHENCASHED] AS [MONTHENCASHED], 
+    [LEAVEENCASHMENT].[MSGNO] AS [MSGNO], 
+    [LEAVEENCASHMENT].[APPROVEDDATE] AS [APPROVEDDATE]
+    FROM [dbo].[LEAVEENCASHMENT] AS [LEAVEENCASHMENT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LEAVEGRADELINK" EntityType="Self.LEAVEGRADELINK" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LEAVEGRADELINK].[LEAVEID] AS [LEAVEID], 
+    [LEAVEGRADELINK].[GRADEID] AS [GRADEID], 
+    [LEAVEGRADELINK].[EFFECTDATE] AS [EFFECTDATE]
+    FROM [dbo].[LEAVEGRADELINK] AS [LEAVEGRADELINK]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LEAVEMASTER" EntityType="Self.LEAVEMASTER" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LEAVEMASTER].[LEAVE_ID] AS [LEAVE_ID], 
+    [LEAVEMASTER].[LEAVE_DESCRIPTION] AS [LEAVE_DESCRIPTION], 
+    [LEAVEMASTER].[ENCASHABLE] AS [ENCASHABLE], 
+    [LEAVEMASTER].[CARRY_FORWARD] AS [CARRY_FORWARD], 
+    [LEAVEMASTER].[YEARS] AS [YEARS], 
+    [LEAVEMASTER].[DAYS] AS [DAYS], 
+    [LEAVEMASTER].[DAYS_YEARS] AS [DAYS_YEARS], 
+    [LEAVEMASTER].[ACC_BEFORE_PERIOD] AS [ACC_BEFORE_PERIOD], 
+    [LEAVEMASTER].[ACC_AFTER_PERIOD] AS [ACC_AFTER_PERIOD], 
+    [LEAVEMASTER].[YEARLY] AS [YEARLY], 
+    [LEAVEMASTER].[MONTHLY] AS [MONTHLY], 
+    [LEAVEMASTER].[NO_OF_DAYS] AS [NO_OF_DAYS], 
+    [LEAVEMASTER].[APPTO] AS [APPTO], 
+    [LEAVEMASTER].[APPLICABLETO] AS [APPLICABLETO], 
+    [LEAVEMASTER].[APPLICABLE_TO] AS [APPLICABLE_TO], 
+    [LEAVEMASTER].[ELIGIBILITY] AS [ELIGIBILITY], 
+    [LEAVEMASTER].[MIN_BAL_DAYS] AS [MIN_BAL_DAYS], 
+    [LEAVEMASTER].[MAX_ENCASH_DAYS] AS [MAX_ENCASH_DAYS], 
+    [LEAVEMASTER].[MIN_NO_OF_DAYS] AS [MIN_NO_OF_DAYS], 
+    [LEAVEMASTER].[MAX_NO_OF_DAYS] AS [MAX_NO_OF_DAYS], 
+    [LEAVEMASTER].[EFFECTDATE] AS [EFFECTDATE], 
+    [LEAVEMASTER].[MAX_LEAVE_MON] AS [MAX_LEAVE_MON], 
+    [LEAVEMASTER].[MAX_LEAVE_TIME] AS [MAX_LEAVE_TIME], 
+    [LEAVEMASTER].[NEGA_LEAVE_ACCRUED] AS [NEGA_LEAVE_ACCRUED], 
+    [LEAVEMASTER].[MIN_ENCDAYS_ACCRUED] AS [MIN_ENCDAYS_ACCRUED], 
+    [LEAVEMASTER].[LTID] AS [LTID], 
+    [LEAVEMASTER].[PAIDLEAVE] AS [PAIDLEAVE], 
+    [LEAVEMASTER].[FORMULA] AS [FORMULA], 
+    [LEAVEMASTER].[ACC_ELIGIBILITY] AS [ACC_ELIGIBILITY], 
+    [LEAVEMASTER].[ACC_CAL] AS [ACC_CAL], 
+    [LEAVEMASTER].[ELIGIBILITY_DAYS] AS [ELIGIBILITY_DAYS], 
+    [LEAVEMASTER].[ACC_DAYS] AS [ACC_DAYS], 
+    [LEAVEMASTER].[ROUNDDAYS] AS [ROUNDDAYS], 
+    [LEAVEMASTER].[PERDAY] AS [PERDAY], 
+    [LEAVEMASTER].[Embed] AS [Embed], 
+    [LEAVEMASTER].[AutoEncash] AS [AutoEncash], 
+    [LEAVEMASTER].[accrualLimit] AS [accrualLimit], 
+    [LEAVEMASTER].[Quarterly] AS [Quarterly], 
+    [LEAVEMASTER].[Anniversary] AS [Anniversary], 
+    [LEAVEMASTER].[MAX_LEAVEAccept_MONTH] AS [MAX_LEAVEAccept_MONTH], 
+    [LEAVEMASTER].[UploadDocument] AS [UploadDocument], 
+    [LEAVEMASTER].[DocumentReqDays] AS [DocumentReqDays], 
+    [LEAVEMASTER].[CompOffExpDays] AS [CompOffExpDays], 
+    [LEAVEMASTER].[CompOffUtiliseApproveFlag] AS [CompOffUtiliseApproveFlag], 
+    [LEAVEMASTER].[IsCompOffType] AS [IsCompOffType], 
+    [LEAVEMASTER].[MinLeavesPerRequest] AS [MinLeavesPerRequest], 
+    [LEAVEMASTER].[MaxLeavesPerRequest] AS [MaxLeavesPerRequest], 
+    [LEAVEMASTER].[MaxLeavesPerYear] AS [MaxLeavesPerYear], 
+    [LEAVEMASTER].[LeavesCombinationAfter] AS [LeavesCombinationAfter], 
+    [LEAVEMASTER].[DaysGapAfterLeave] AS [DaysGapAfterLeave], 
+    [LEAVEMASTER].[Before15] AS [Before15], 
+    [LEAVEMASTER].[After15] AS [After15], 
+    [LEAVEMASTER].[HalfYearly] AS [HalfYearly], 
+    [LEAVEMASTER].[IsMailReqForSecondManager] AS [IsMailReqForSecondManager], 
+    [LEAVEMASTER].[EMBED_PREFIX] AS [EMBED_PREFIX], 
+    [LEAVEMASTER].[EMBED_SUFFIX] AS [EMBED_SUFFIX]
+    FROM [dbo].[LEAVEMASTER] AS [LEAVEMASTER]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="linkLeaveLoc" EntityType="Self.linkLeaveLoc" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [linkLeaveLoc].[ID] AS [ID], 
+    [linkLeaveLoc].[LeaveID] AS [LeaveID], 
+    [linkLeaveLoc].[LocID] AS [LocID], 
+    [linkLeaveLoc].[EffectDate] AS [EffectDate]
+    FROM [dbo].[linkLeaveLoc] AS [linkLeaveLoc]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MONTHEND_LEAVEBAL" EntityType="Self.MONTHEND_LEAVEBAL" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MONTHEND_LEAVEBAL].[EMP_ID] AS [EMP_ID], 
+    [MONTHEND_LEAVEBAL].[MONTH] AS [MONTH], 
+    [MONTHEND_LEAVEBAL].[LEAVE_ID] AS [LEAVE_ID], 
+    [MONTHEND_LEAVEBAL].[START_CLOSE] AS [START_CLOSE], 
+    [MONTHEND_LEAVEBAL].[O_BAL] AS [O_BAL], 
+    [MONTHEND_LEAVEBAL].[ACCRUED] AS [ACCRUED], 
+    [MONTHEND_LEAVEBAL].[UTILIZED] AS [UTILIZED], 
+    [MONTHEND_LEAVEBAL].[ENCASHED] AS [ENCASHED], 
+    [MONTHEND_LEAVEBAL].[AUTILIZED] AS [AUTILIZED]
+    FROM [dbo].[MONTHEND_LEAVEBAL] AS [MONTHEND_LEAVEBAL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MONTHLYATTENDANCE" EntityType="Self.MONTHLYATTENDANCE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MONTHLYATTENDANCE].[EMP_ID] AS [EMP_ID], 
+    [MONTHLYATTENDANCE].[MONTH] AS [MONTH], 
+    [MONTHLYATTENDANCE].[TOTAL_DAYS] AS [TOTAL_DAYS], 
+    [MONTHLYATTENDANCE].[NO_OF_WORKING_DAYS] AS [NO_OF_WORKING_DAYS], 
+    [MONTHLYATTENDANCE].[DAYS_WORKED] AS [DAYS_WORKED], 
+    [MONTHLYATTENDANCE].[SPECIAL_SHIFT] AS [SPECIAL_SHIFT], 
+    [MONTHLYATTENDANCE].[LATE_DAYS] AS [LATE_DAYS], 
+    [MONTHLYATTENDANCE].[OT_HOURS] AS [OT_HOURS], 
+    [MONTHLYATTENDANCE].[LATE_DAYS1] AS [LATE_DAYS1], 
+    [MONTHLYATTENDANCE].[LATE_DAYS2] AS [LATE_DAYS2], 
+    [MONTHLYATTENDANCE].[FLAG] AS [FLAG], 
+    [MONTHLYATTENDANCE].[PUNCH_FLAG] AS [PUNCH_FLAG], 
+    [MONTHLYATTENDANCE].[LOSS_OF_PAY] AS [LOSS_OF_PAY], 
+    [MONTHLYATTENDANCE].[SHIFT_DAYS] AS [SHIFT_DAYS], 
+    [MONTHLYATTENDANCE].[EARLYDAYS1] AS [EARLYDAYS1], 
+    [MONTHLYATTENDANCE].[EARLYDAYS2] AS [EARLYDAYS2], 
+    [MONTHLYATTENDANCE].[EARLYDAYS3] AS [EARLYDAYS3], 
+    [MONTHLYATTENDANCE].[LDEDUCTDAYS] AS [LDEDUCTDAYS], 
+    [MONTHLYATTENDANCE].[EDEDUCTDAYS] AS [EDEDUCTDAYS], 
+    [MONTHLYATTENDANCE].[NOJDEDUCTDAYS] AS [NOJDEDUCTDAYS], 
+    [MONTHLYATTENDANCE].[LATEDAYSDEDUCT] AS [LATEDAYSDEDUCT], 
+    [MONTHLYATTENDANCE].[EARLYDAYSDEDUCT] AS [EARLYDAYSDEDUCT], 
+    [MONTHLYATTENDANCE].[VERSIONFLAG] AS [VERSIONFLAG], 
+    [MONTHLYATTENDANCE].[WOFFOTHRS] AS [WOFFOTHRS], 
+    [MONTHLYATTENDANCE].[HOLOTHRS] AS [HOLOTHRS], 
+    [MONTHLYATTENDANCE].[WOFFDAYS] AS [WOFFDAYS], 
+    [MONTHLYATTENDANCE].[HOLIDAYS] AS [HOLIDAYS], 
+    [MONTHLYATTENDANCE].[PAY_TDAYS] AS [PAY_TDAYS], 
+    [MONTHLYATTENDANCE].[STATUS] AS [STATUS], 
+    [MONTHLYATTENDANCE].[IncentiveHrs] AS [IncentiveHrs], 
+    [MONTHLYATTENDANCE].[LEAVES] AS [LEAVES], 
+    [MONTHLYATTENDANCE].[UnpaidLeave] AS [UnpaidLeave]
+    FROM [dbo].[MONTHLYATTENDANCE] AS [MONTHLYATTENDANCE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OTCOFFHRS" EntityType="Self.OTCOFFHRS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OTCOFFHRS].[EMPID] AS [EMPID], 
+    [OTCOFFHRS].[DAY] AS [DAY], 
+    [OTCOFFHRS].[ACTUALHRS] AS [ACTUALHRS], 
+    [OTCOFFHRS].[BALHRS] AS [BALHRS], 
+    [OTCOFFHRS].[FLAG] AS [FLAG]
+    FROM [dbo].[OTCOFFHRS] AS [OTCOFFHRS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PAYPERIODDEFINITION" EntityType="Self.PAYPERIODDEFINITION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PAYPERIODDEFINITION].[PAY_CODE] AS [PAY_CODE], 
+    [PAYPERIODDEFINITION].[CLOSING_DATE] AS [CLOSING_DATE], 
+    [PAYPERIODDEFINITION].[PAY_DATE] AS [PAY_DATE], 
+    [PAYPERIODDEFINITION].[PAY_FROMDATE] AS [PAY_FROMDATE], 
+    [PAYPERIODDEFINITION].[SAL_DATE] AS [SAL_DATE], 
+    [PAYPERIODDEFINITION].[ATTEN_DATE] AS [ATTEN_DATE]
+    FROM [dbo].[PAYPERIODDEFINITION] AS [PAYPERIODDEFINITION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Payroll_LOG" EntityType="Self.Payroll_LOG" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Payroll_LOG].[id] AS [id], 
+    [Payroll_LOG].[SelMonth] AS [SelMonth], 
+    [Payroll_LOG].[type1] AS [type1], 
+    [Payroll_LOG].[server1] AS [server1], 
+    [Payroll_LOG].[database1] AS [database1], 
+    [Payroll_LOG].[dbUName] AS [dbUName], 
+    [Payroll_LOG].[dbPass] AS [dbPass], 
+    [Payroll_LOG].[SelectedEmployees] AS [SelectedEmployees], 
+    [Payroll_LOG].[ByRef] AS [ByRef], 
+    [Payroll_LOG].[Source] AS [Source]
+    FROM [dbo].[Payroll_LOG] AS [Payroll_LOG]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

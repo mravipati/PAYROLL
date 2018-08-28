@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ANil_July_2018ModelStoreContainer" CdmEntityContainer="ANil_July_2018Entities">
+    <EntitySetMapping Name="COFFAPPROVALs">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.COFFAPPROVAL">
+        <MappingFragment StoreEntitySet="COFFAPPROVAL">
+          <ScalarProperty Name="APPLICATIONNO" ColumnName="APPLICATIONNO" />
+          <ScalarProperty Name="DAY" ColumnName="DAY" />
+          <ScalarProperty Name="APPROVED_HRS" ColumnName="APPROVED_HRS" />
+          <ScalarProperty Name="APPROVED" ColumnName="APPROVED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMP_WEEKLYOFF">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.EMP_WEEKLYOFF">
+        <MappingFragment StoreEntitySet="EMP_WEEKLYOFF">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="WEEKLY_OFF1" ColumnName="WEEKLY_OFF1" />
+          <ScalarProperty Name="WEEKLY_OFF1_DAYS" ColumnName="WEEKLY_OFF1_DAYS" />
+          <ScalarProperty Name="WEEKLY_OFF2" ColumnName="WEEKLY_OFF2" />
+          <ScalarProperty Name="WEEKLY_OFF2_DAYS" ColumnName="WEEKLY_OFF2_DAYS" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEELEAVEDETAILS">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.EMPLOYEELEAVEDETAIL">
+        <MappingFragment StoreEntitySet="EMPLOYEELEAVEDETAILS">
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+          <ScalarProperty Name="LEAVE_ID" ColumnName="LEAVE_ID" />
+          <ScalarProperty Name="O_BAL" ColumnName="O_BAL" />
+          <ScalarProperty Name="ACCRUED" ColumnName="ACCRUED" />
+          <ScalarProperty Name="UTILIZED" ColumnName="UTILIZED" />
+          <ScalarProperty Name="ENCASHED" ColumnName="ENCASHED" />
+          <ScalarProperty Name="NO_OF_TIMES" ColumnName="NO_OF_TIMES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEEMASTERs">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.EMPLOYEEMASTER">
+        <MappingFragment StoreEntitySet="EMPLOYEEMASTER">
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="FNAME" ColumnName="FNAME" />
+          <ScalarProperty Name="MNAME" ColumnName="MNAME" />
+          <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+          <ScalarProperty Name="EMPLOYMENT_TYPE" ColumnName="EMPLOYMENT_TYPE" />
+          <ScalarProperty Name="DOJ" ColumnName="DOJ" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="DESIGNATION_ID" ColumnName="DESIGNATION_ID" />
+          <ScalarProperty Name="GRADE_ID" ColumnName="GRADE_ID" />
+          <ScalarProperty Name="DEPTNO" ColumnName="DEPTNO" />
+          <ScalarProperty Name="LOCATION_ID" ColumnName="LOCATION_ID" />
+          <ScalarProperty Name="SECTION_ID" ColumnName="SECTION_ID" />
+          <ScalarProperty Name="BASIC_SAL" ColumnName="BASIC_SAL" />
+          <ScalarProperty Name="PAYMENT_BY" ColumnName="PAYMENT_BY" />
+          <ScalarProperty Name="WEEKLY_OFF" ColumnName="WEEKLY_OFF" />
+          <ScalarProperty Name="CONTRACT_ID" ColumnName="CONTRACT_ID" />
+          <ScalarProperty Name="DATE_OF_RESIG_TERMIN" ColumnName="DATE_OF_RESIG_TERMIN" />
+          <ScalarProperty Name="RESIGN_ON" ColumnName="RESIGN_ON" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="MARRIED" ColumnName="MARRIED" />
+          <ScalarProperty Name="NOMINEE_NAME" ColumnName="NOMINEE_NAME" />
+          <ScalarProperty Name="NOMINEE_ADDRESS" ColumnName="NOMINEE_ADDRESS" />
+          <ScalarProperty Name="RELATION" ColumnName="RELATION" />
+          <ScalarProperty Name="PHONE_NO" ColumnName="PHONE_NO" />
+          <ScalarProperty Name="PASSPORT_NO" ColumnName="PASSPORT_NO" />
+          <ScalarProperty Name="SKILLED_UNSKILLED" ColumnName="SKILLED_UNSKILLED" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="OT_RATE" ColumnName="OT_RATE" />
+          <ScalarProperty Name="ESIAPPLICABLE" ColumnName="ESIAPPLICABLE" />
+          <ScalarProperty Name="PFAPPLICABLE" ColumnName="PFAPPLICABLE" />
+          <ScalarProperty Name="ESINO" ColumnName="ESINO" />
+          <ScalarProperty Name="PFNO" ColumnName="PFNO" />
+          <ScalarProperty Name="ACCOUNTNO" ColumnName="ACCOUNTNO" />
+          <ScalarProperty Name="BANKNAME" ColumnName="BANKNAME" />
+          <ScalarProperty Name="SERIALNO" ColumnName="SERIALNO" />
+          <ScalarProperty Name="LOGINID" ColumnName="LOGINID" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="MGRID" ColumnName="MGRID" />
+          <ScalarProperty Name="PAY_CODE" ColumnName="PAY_CODE" />
+          <ScalarProperty Name="OT_ID" ColumnName="OT_ID" />
+          <ScalarProperty Name="LATE_ID" ColumnName="LATE_ID" />
+          <ScalarProperty Name="CHEQUE_NO" ColumnName="CHEQUE_NO" />
+          <ScalarProperty Name="CHEQUE_DATE" ColumnName="CHEQUE_DATE" />
+          <ScalarProperty Name="PTAPPLICABLE" ColumnName="PTAPPLICABLE" />
+          <ScalarProperty Name="ESIDATE" ColumnName="ESIDATE" />
+          <ScalarProperty Name="EMAIL_ID" ColumnName="EMAIL_ID" />
+          <ScalarProperty Name="EMPPHOTO" ColumnName="EMPPHOTO" />
+          <ScalarProperty Name="PHONE_OFF" ColumnName="PHONE_OFF" />
+          <ScalarProperty Name="EXT" ColumnName="EXT" />
+          <ScalarProperty Name="MOBILENO" ColumnName="MOBILENO" />
+          <ScalarProperty Name="BYALPHA" ColumnName="BYALPHA" />
+          <ScalarProperty Name="BYNUMBER" ColumnName="BYNUMBER" />
+          <ScalarProperty Name="UNIONID" ColumnName="UNIONID" />
+          <ScalarProperty Name="HRID" ColumnName="HRID" />
+          <ScalarProperty Name="JMONTH" ColumnName="JMONTH" />
+          <ScalarProperty Name="RMONTH" ColumnName="RMONTH" />
+          <ScalarProperty Name="COID" ColumnName="COID" />
+          <ScalarProperty Name="JVLOC_ID" ColumnName="JVLOC_ID" />
+          <ScalarProperty Name="PhotoData" ColumnName="PhotoData" />
+          <ScalarProperty Name="CDesigID" ColumnName="CDesigID" />
+          <ScalarProperty Name="Aadhaar" ColumnName="Aadhaar" />
+          <ScalarProperty Name="AEID" ColumnName="AEID" />
+          <ScalarProperty Name="emPhone" ColumnName="emPhone" />
+          <ScalarProperty Name="emContact" ColumnName="emContact" />
+          <ScalarProperty Name="PERMANENTADDRESS" ColumnName="PERMANENTADDRESS" />
+          <ScalarProperty Name="leaveauthority" ColumnName="leaveauthority" />
+          <ScalarProperty Name="PANNO" ColumnName="PANNO" />
+          <ScalarProperty Name="PASSWORD_CHANGE_DATE" ColumnName="PASSWORD_CHANGE_DATE" />
+          <ScalarProperty Name="FAILURE_ATTEMPTS" ColumnName="FAILURE_ATTEMPTS" />
+          <ScalarProperty Name="IS_LOCKED" ColumnName="IS_LOCKED" />
+          <ScalarProperty Name="EPSApplicable" ColumnName="EPSApplicable" />
+          <ScalarProperty Name="dtFinalSettlement" ColumnName="dtFinalSettlement" />
+          <ScalarProperty Name="hiQual" ColumnName="hiQual" />
+          <ScalarProperty Name="Handicap" ColumnName="Handicap" />
+          <ScalarProperty Name="IFSCCODE" ColumnName="IFSCCODE" />
+          <ScalarProperty Name="ESI_END_MONTH" ColumnName="ESI_END_MONTH" />
+          <ScalarProperty Name="BANK_BRANCH" ColumnName="BANK_BRANCH" />
+          <ScalarProperty Name="SSID" ColumnName="SSID" />
+          <ScalarProperty Name="annualsalary" ColumnName="annualsalary" />
+          <ScalarProperty Name="weekly_off1" ColumnName="weekly_off1" />
+          <ScalarProperty Name="Passport_Date" ColumnName="Passport_Date" />
+          <ScalarProperty Name="IsTrgerFired" ColumnName="IsTrgerFired" />
+          <ScalarProperty Name="ReasonForResign" ColumnName="ReasonForResign" />
+          <ScalarProperty Name="PersonalEmail" ColumnName="PersonalEmail" />
+          <ScalarProperty Name="Address_change_date" ColumnName="Address_change_date" />
+          <ScalarProperty Name="CTC_PERIOD" ColumnName="CTC_PERIOD" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="FNF_STATUS" ColumnName="FNF_STATUS" />
+          <ScalarProperty Name="NPS_APPLICABLE" ColumnName="NPS_APPLICABLE" />
+          <ScalarProperty Name="NPS_PERCENTAGE" ColumnName="NPS_PERCENTAGE" />
+          <ScalarProperty Name="PortalAccessble" ColumnName="PortalAccessble" />
+          <ScalarProperty Name="SwipeAttendance" ColumnName="SwipeAttendance" />
+          <ScalarProperty Name="EmergencyRelation" ColumnName="EmergencyRelation" />
+          <ScalarProperty Name="BeneficiaryName" ColumnName="BeneficiaryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENCASHPROCESSes">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.ENCASHPROCESS">
+        <MappingFragment StoreEntitySet="ENCASHPROCESS">
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="ENCASHMENT_DAYS" ColumnName="ENCASHMENT_DAYS" />
+          <ScalarProperty Name="PREF1" ColumnName="PREF1" />
+          <ScalarProperty Name="PREF2" ColumnName="PREF2" />
+          <ScalarProperty Name="PREF3" ColumnName="PREF3" />
+          <ScalarProperty Name="DAYS_DEDUCT1" ColumnName="DAYS_DEDUCT1" />
+          <ScalarProperty Name="DAYS_DEDUCT2" ColumnName="DAYS_DEDUCT2" />
+          <ScalarProperty Name="DAYS_DEDUCT3" ColumnName="DAYS_DEDUCT3" />
+          <ScalarProperty Name="EPREF1" ColumnName="EPREF1" />
+          <ScalarProperty Name="EPREF2" ColumnName="EPREF2" />
+          <ScalarProperty Name="EPREF3" ColumnName="EPREF3" />
+          <ScalarProperty Name="EDAYS_DEDUCT1" ColumnName="EDAYS_DEDUCT1" />
+          <ScalarProperty Name="EDAYS_DEDUCT2" ColumnName="EDAYS_DEDUCT2" />
+          <ScalarProperty Name="EDAYS_DEDUCT3" ColumnName="EDAYS_DEDUCT3" />
+          <ScalarProperty Name="PAYPERIODSTART" ColumnName="PAYPERIODSTART" />
+          <ScalarProperty Name="PAYPERIODEND" ColumnName="PAYPERIODEND" />
+          <ScalarProperty Name="ATTENSTART" ColumnName="ATTENSTART" />
+          <ScalarProperty Name="ATTENEND" ColumnName="ATTENEND" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LEAVEAPPAPPROVALs">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.LEAVEAPPAPPROVAL">
+        <MappingFragment StoreEntitySet="LEAVEAPPAPPROVAL">
+          <ScalarProperty Name="APPLICATION_NO" ColumnName="APPLICATION_NO" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="APPL_DATE" ColumnName="APPL_DATE" />
+          <ScalarProperty Name="LEAVETYPE" ColumnName="LEAVETYPE" />
+          <ScalarProperty Name="DATE_FROM" ColumnName="DATE_FROM" />
+          <ScalarProperty Name="DATE_TO" ColumnName="DATE_TO" />
+          <ScalarProperty Name="APPROVED" ColumnName="APPROVED" />
+          <ScalarProperty Name="APPROVED_DATE" ColumnName="APPROVED_DATE" />
+          <ScalarProperty Name="APPROVED_BY" ColumnName="APPROVED_BY" />
+          <ScalarProperty Name="MSGNO" ColumnName="MSGNO" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="AUTHORIZEDBY" ColumnName="AUTHORIZEDBY" />
+          <ScalarProperty Name="HALF2ND" ColumnName="HALF2ND" />
+          <ScalarProperty Name="HALF1ST" ColumnName="HALF1ST" />
+          <ScalarProperty Name="MOD_CAN" ColumnName="MOD_CAN" />
+          <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+          <ScalarProperty Name="RejectReason" ColumnName="RejectReason" />
+          <ScalarProperty Name="ModifiedBY" ColumnName="ModifiedBY" />
+          <ScalarProperty Name="ModifyRemarks" ColumnName="ModifyRemarks" />
+          <ScalarProperty Name="NoOfDays" ColumnName="NoOfDays" />
+          <ScalarProperty Name="BulkApproved" ColumnName="BulkApproved" />
+          <ScalarProperty Name="App_Year" ColumnName="App_Year" />
+          <ScalarProperty Name="Subordinates" ColumnName="Subordinates" />
+          <ScalarProperty Name="AutoInsert" ColumnName="AutoInsert" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LEAVEENCASHMENTs">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.LEAVEENCASHMENT">
+        <MappingFragment StoreEntitySet="LEAVEENCASHMENT">
+          <ScalarProperty Name="APP_NO" ColumnName="APP_NO" />
+          <ScalarProperty Name="DATE1" ColumnName="DATE1" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="LEAVE_TYPE" ColumnName="LEAVE_TYPE" />
+          <ScalarProperty Name="ENCASHING_DAYS" ColumnName="ENCASHING_DAYS" />
+          <ScalarProperty Name="APPROVED" ColumnName="APPROVED" />
+          <ScalarProperty Name="APPROVEDBY" ColumnName="APPROVEDBY" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="MONTHENCASHED" ColumnName="MONTHENCASHED" />
+          <ScalarProperty Name="MSGNO" ColumnName="MSGNO" />
+          <ScalarProperty Name="APPROVEDDATE" ColumnName="APPROVEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LEAVEGRADELINKs">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.LEAVEGRADELINK">
+        <MappingFragment StoreEntitySet="LEAVEGRADELINK">
+          <ScalarProperty Name="LEAVEID" ColumnName="LEAVEID" />
+          <ScalarProperty Name="GRADEID" ColumnName="GRADEID" />
+          <ScalarProperty Name="EFFECTDATE" ColumnName="EFFECTDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LEAVEMASTERs">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.LEAVEMASTER">
+        <MappingFragment StoreEntitySet="LEAVEMASTER">
+          <ScalarProperty Name="LEAVE_ID" ColumnName="LEAVE_ID" />
+          <ScalarProperty Name="LEAVE_DESCRIPTION" ColumnName="LEAVE_DESCRIPTION" />
+          <ScalarProperty Name="ENCASHABLE" ColumnName="ENCASHABLE" />
+          <ScalarProperty Name="CARRY_FORWARD" ColumnName="CARRY_FORWARD" />
+          <ScalarProperty Name="YEARS" ColumnName="YEARS" />
+          <ScalarProperty Name="DAYS" ColumnName="DAYS" />
+          <ScalarProperty Name="DAYS_YEARS" ColumnName="DAYS_YEARS" />
+          <ScalarProperty Name="ACC_BEFORE_PERIOD" ColumnName="ACC_BEFORE_PERIOD" />
+          <ScalarProperty Name="ACC_AFTER_PERIOD" ColumnName="ACC_AFTER_PERIOD" />
+          <ScalarProperty Name="YEARLY" ColumnName="YEARLY" />
+          <ScalarProperty Name="MONTHLY" ColumnName="MONTHLY" />
+          <ScalarProperty Name="NO_OF_DAYS" ColumnName="NO_OF_DAYS" />
+          <ScalarProperty Name="APPTO" ColumnName="APPTO" />
+          <ScalarProperty Name="APPLICABLETO" ColumnName="APPLICABLETO" />
+          <ScalarProperty Name="APPLICABLE_TO" ColumnName="APPLICABLE_TO" />
+          <ScalarProperty Name="ELIGIBILITY" ColumnName="ELIGIBILITY" />
+          <ScalarProperty Name="MIN_BAL_DAYS" ColumnName="MIN_BAL_DAYS" />
+          <ScalarProperty Name="MAX_ENCASH_DAYS" ColumnName="MAX_ENCASH_DAYS" />
+          <ScalarProperty Name="MIN_NO_OF_DAYS" ColumnName="MIN_NO_OF_DAYS" />
+          <ScalarProperty Name="MAX_NO_OF_DAYS" ColumnName="MAX_NO_OF_DAYS" />
+          <ScalarProperty Name="EFFECTDATE" ColumnName="EFFECTDATE" />
+          <ScalarProperty Name="MAX_LEAVE_MON" ColumnName="MAX_LEAVE_MON" />
+          <ScalarProperty Name="MAX_LEAVE_TIME" ColumnName="MAX_LEAVE_TIME" />
+          <ScalarProperty Name="NEGA_LEAVE_ACCRUED" ColumnName="NEGA_LEAVE_ACCRUED" />
+          <ScalarProperty Name="MIN_ENCDAYS_ACCRUED" ColumnName="MIN_ENCDAYS_ACCRUED" />
+          <ScalarProperty Name="LTID" ColumnName="LTID" />
+          <ScalarProperty Name="PAIDLEAVE" ColumnName="PAIDLEAVE" />
+          <ScalarProperty Name="FORMULA" ColumnName="FORMULA" />
+          <ScalarProperty Name="ACC_ELIGIBILITY" ColumnName="ACC_ELIGIBILITY" />
+          <ScalarProperty Name="ACC_CAL" ColumnName="ACC_CAL" />
+          <ScalarProperty Name="ELIGIBILITY_DAYS" ColumnName="ELIGIBILITY_DAYS" />
+          <ScalarProperty Name="ACC_DAYS" ColumnName="ACC_DAYS" />
+          <ScalarProperty Name="ROUNDDAYS" ColumnName="ROUNDDAYS" />
+          <ScalarProperty Name="PERDAY" ColumnName="PERDAY" />
+          <ScalarProperty Name="Embed" ColumnName="Embed" />
+          <ScalarProperty Name="AutoEncash" ColumnName="AutoEncash" />
+          <ScalarProperty Name="accrualLimit" ColumnName="accrualLimit" />
+          <ScalarProperty Name="Quarterly" ColumnName="Quarterly" />
+          <ScalarProperty Name="Anniversary" ColumnName="Anniversary" />
+          <ScalarProperty Name="MAX_LEAVEAccept_MONTH" ColumnName="MAX_LEAVEAccept_MONTH" />
+          <ScalarProperty Name="UploadDocument" ColumnName="UploadDocument" />
+          <ScalarProperty Name="DocumentReqDays" ColumnName="DocumentReqDays" />
+          <ScalarProperty Name="CompOffExpDays" ColumnName="CompOffExpDays" />
+          <ScalarProperty Name="CompOffUtiliseApproveFlag" ColumnName="CompOffUtiliseApproveFlag" />
+          <ScalarProperty Name="IsCompOffType" ColumnName="IsCompOffType" />
+          <ScalarProperty Name="MinLeavesPerRequest" ColumnName="MinLeavesPerRequest" />
+          <ScalarProperty Name="MaxLeavesPerRequest" ColumnName="MaxLeavesPerRequest" />
+          <ScalarProperty Name="MaxLeavesPerYear" ColumnName="MaxLeavesPerYear" />
+          <ScalarProperty Name="LeavesCombinationAfter" ColumnName="LeavesCombinationAfter" />
+          <ScalarProperty Name="DaysGapAfterLeave" ColumnName="DaysGapAfterLeave" />
+          <ScalarProperty Name="Before15" ColumnName="Before15" />
+          <ScalarProperty Name="After15" ColumnName="After15" />
+          <ScalarProperty Name="HalfYearly" ColumnName="HalfYearly" />
+          <ScalarProperty Name="IsMailReqForSecondManager" ColumnName="IsMailReqForSecondManager" />
+          <ScalarProperty Name="EMBED_PREFIX" ColumnName="EMBED_PREFIX" />
+          <ScalarProperty Name="EMBED_SUFFIX" ColumnName="EMBED_SUFFIX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="linkLeaveLocs">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.linkLeaveLoc">
+        <MappingFragment StoreEntitySet="linkLeaveLoc">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LeaveID" ColumnName="LeaveID" />
+          <ScalarProperty Name="LocID" ColumnName="LocID" />
+          <ScalarProperty Name="EffectDate" ColumnName="EffectDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MONTHEND_LEAVEBAL">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.MONTHEND_LEAVEBAL">
+        <MappingFragment StoreEntitySet="MONTHEND_LEAVEBAL">
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="LEAVE_ID" ColumnName="LEAVE_ID" />
+          <ScalarProperty Name="START_CLOSE" ColumnName="START_CLOSE" />
+          <ScalarProperty Name="O_BAL" ColumnName="O_BAL" />
+          <ScalarProperty Name="ACCRUED" ColumnName="ACCRUED" />
+          <ScalarProperty Name="UTILIZED" ColumnName="UTILIZED" />
+          <ScalarProperty Name="ENCASHED" ColumnName="ENCASHED" />
+          <ScalarProperty Name="AUTILIZED" ColumnName="AUTILIZED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MONTHLYATTENDANCEs">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.MONTHLYATTENDANCE">
+        <MappingFragment StoreEntitySet="MONTHLYATTENDANCE">
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="TOTAL_DAYS" ColumnName="TOTAL_DAYS" />
+          <ScalarProperty Name="NO_OF_WORKING_DAYS" ColumnName="NO_OF_WORKING_DAYS" />
+          <ScalarProperty Name="DAYS_WORKED" ColumnName="DAYS_WORKED" />
+          <ScalarProperty Name="SPECIAL_SHIFT" ColumnName="SPECIAL_SHIFT" />
+          <ScalarProperty Name="LATE_DAYS" ColumnName="LATE_DAYS" />
+          <ScalarProperty Name="OT_HOURS" ColumnName="OT_HOURS" />
+          <ScalarProperty Name="LATE_DAYS1" ColumnName="LATE_DAYS1" />
+          <ScalarProperty Name="LATE_DAYS2" ColumnName="LATE_DAYS2" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="PUNCH_FLAG" ColumnName="PUNCH_FLAG" />
+          <ScalarProperty Name="LOSS_OF_PAY" ColumnName="LOSS_OF_PAY" />
+          <ScalarProperty Name="SHIFT_DAYS" ColumnName="SHIFT_DAYS" />
+          <ScalarProperty Name="EARLYDAYS1" ColumnName="EARLYDAYS1" />
+          <ScalarProperty Name="EARLYDAYS2" ColumnName="EARLYDAYS2" />
+          <ScalarProperty Name="EARLYDAYS3" ColumnName="EARLYDAYS3" />
+          <ScalarProperty Name="LDEDUCTDAYS" ColumnName="LDEDUCTDAYS" />
+          <ScalarProperty Name="EDEDUCTDAYS" ColumnName="EDEDUCTDAYS" />
+          <ScalarProperty Name="NOJDEDUCTDAYS" ColumnName="NOJDEDUCTDAYS" />
+          <ScalarProperty Name="LATEDAYSDEDUCT" ColumnName="LATEDAYSDEDUCT" />
+          <ScalarProperty Name="EARLYDAYSDEDUCT" ColumnName="EARLYDAYSDEDUCT" />
+          <ScalarProperty Name="VERSIONFLAG" ColumnName="VERSIONFLAG" />
+          <ScalarProperty Name="WOFFOTHRS" ColumnName="WOFFOTHRS" />
+          <ScalarProperty Name="HOLOTHRS" ColumnName="HOLOTHRS" />
+          <ScalarProperty Name="WOFFDAYS" ColumnName="WOFFDAYS" />
+          <ScalarProperty Name="HOLIDAYS" ColumnName="HOLIDAYS" />
+          <ScalarProperty Name="PAY_TDAYS" ColumnName="PAY_TDAYS" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="IncentiveHrs" ColumnName="IncentiveHrs" />
+          <ScalarProperty Name="LEAVES" ColumnName="LEAVES" />
+          <ScalarProperty Name="UnpaidLeave" ColumnName="UnpaidLeave" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OTCOFFHRS">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.OTCOFFHR">
+        <MappingFragment StoreEntitySet="OTCOFFHRS">
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="DAY" ColumnName="DAY" />
+          <ScalarProperty Name="ACTUALHRS" ColumnName="ACTUALHRS" />
+          <ScalarProperty Name="BALHRS" ColumnName="BALHRS" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAYPERIODDEFINITIONs">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.PAYPERIODDEFINITION">
+        <MappingFragment StoreEntitySet="PAYPERIODDEFINITION">
+          <ScalarProperty Name="PAY_CODE" ColumnName="PAY_CODE" />
+          <ScalarProperty Name="CLOSING_DATE" ColumnName="CLOSING_DATE" />
+          <ScalarProperty Name="PAY_DATE" ColumnName="PAY_DATE" />
+          <ScalarProperty Name="PAY_FROMDATE" ColumnName="PAY_FROMDATE" />
+          <ScalarProperty Name="SAL_DATE" ColumnName="SAL_DATE" />
+          <ScalarProperty Name="ATTEN_DATE" ColumnName="ATTEN_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payroll_LOG">
+      <EntityTypeMapping TypeName="ANil_July_2018Model.Payroll_LOG">
+        <MappingFragment StoreEntitySet="Payroll_LOG">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="SelMonth" ColumnName="SelMonth" />
+          <ScalarProperty Name="type1" ColumnName="type1" />
+          <ScalarProperty Name="server1" ColumnName="server1" />
+          <ScalarProperty Name="database1" ColumnName="database1" />
+          <ScalarProperty Name="dbUName" ColumnName="dbUName" />
+          <ScalarProperty Name="dbPass" ColumnName="dbPass" />
+          <ScalarProperty Name="SelectedEmployees" ColumnName="SelectedEmployees" />
+          <ScalarProperty Name="ByRef" ColumnName="ByRef" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{D737C48B-F44E-4BEF-8EB5-F1A0911A9744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayrollProcess", "PayrollProcess\PayrollProcess.csproj", "{06281BF3-5CDB-420D-AAED-70FF53E752B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D737C48B-F44E-4BEF-8EB5-F1A0911A9744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D737C48B-F44E-4BEF-8EB5-F1A0911A9744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D737C48B-F44E-4BEF-8EB5-F1A0911A9744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D737C48B-F44E-4BEF-8EB5-F1A0911A9744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06281BF3-5CDB-420D-AAED-70FF53E752B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06281BF3-5CDB-420D-AAED-70FF53E752B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06281BF3-5CDB-420D-AAED-70FF53E752B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06281BF3-5CDB-420D-AAED-70FF53E752B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48321A2A-1D53-41BA-A13B-661BFC1A9838}
+	EndGlobalSection
+EndGlobal

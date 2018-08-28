@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ANil_July_2018Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="COFFAPPROVAL">
+    <Key>
+      <PropertyRef Name="APPLICATIONNO" />
+      <PropertyRef Name="DAY" />
+    </Key>
+    <Property Name="APPLICATIONNO" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DAY" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="APPROVED_HRS" Type="Double" />
+    <Property Name="APPROVED" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EMP_WEEKLYOFF">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EMP_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WEEKLY_OFF1" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="WEEKLY_OFF1_DAYS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WEEKLY_OFF2" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="WEEKLY_OFF2_DAYS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EMPLOYEELEAVEDETAIL">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+      <PropertyRef Name="YEAR" />
+      <PropertyRef Name="LEAVE_ID" />
+    </Key>
+    <Property Name="EMP_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YEAR" Type="Double" Nullable="false" />
+    <Property Name="LEAVE_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="O_BAL" Type="Double" />
+    <Property Name="ACCRUED" Type="Double" />
+    <Property Name="UTILIZED" Type="Double" />
+    <Property Name="ENCASHED" Type="Double" />
+    <Property Name="NO_OF_TIMES" Type="Double" />
+  </EntityType>
+  <EntityType Name="EMPLOYEEMASTER">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+      <PropertyRef Name="TITLE" />
+      <PropertyRef Name="FNAME" />
+      <PropertyRef Name="LNAME" />
+      <PropertyRef Name="EMPLOYMENT_TYPE" />
+      <PropertyRef Name="DOJ" />
+      <PropertyRef Name="SEX" />
+      <PropertyRef Name="DESIGNATION_ID" />
+      <PropertyRef Name="GRADE_ID" />
+      <PropertyRef Name="DEPTNO" />
+      <PropertyRef Name="LOCATION_ID" />
+      <PropertyRef Name="SECTION_ID" />
+      <PropertyRef Name="PAYMENT_BY" />
+      <PropertyRef Name="WEEKLY_OFF" />
+      <PropertyRef Name="MARRIED" />
+      <PropertyRef Name="STATUS" />
+    </Key>
+    <Property Name="EMP_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TITLE" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FNAME" Type="String" MaxLength="17" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MNAME" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="LNAME" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EMPLOYMENT_TYPE" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DOJ" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SEX" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DESIGNATION_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GRADE_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DEPTNO" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LOCATION_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SECTION_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BASIC_SAL" Type="Double" />
+    <Property Name="PAYMENT_BY" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WEEKLY_OFF" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CONTRACT_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="DATE_OF_RESIG_TERMIN" Type="DateTime" Precision="3" />
+    <Property Name="RESIGN_ON" Type="DateTime" Precision="3" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="ADDRESS" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MARRIED" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NOMINEE_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="NOMINEE_ADDRESS" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RELATION" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PHONE_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PASSPORT_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SKILLED_UNSKILLED" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OT_RATE" Type="Double" />
+    <Property Name="ESIAPPLICABLE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="PFAPPLICABLE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ESINO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="PFNO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="ACCOUNTNO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BANKNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SERIALNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LOGINID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PASSWORD" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MGRID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PAY_CODE" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="OT_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="LATE_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="CHEQUE_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CHEQUE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="PTAPPLICABLE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ESIDATE" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EMPPHOTO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PHONE_OFF" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXT" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="MOBILENO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="BYALPHA" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="BYNUMBER" Type="Double" />
+    <Property Name="UNIONID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="HRID" Type="Double" />
+    <Property Name="JMONTH" Type="DateTime" Precision="3" />
+    <Property Name="RMONTH" Type="DateTime" Precision="3" />
+    <Property Name="COID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="JVLOC_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="PhotoData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CDesigID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Aadhaar" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="AEID" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="emPhone" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="emContact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PERMANENTADDRESS" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="leaveauthority" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PANNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD_CHANGE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="FAILURE_ATTEMPTS" Type="Int32" />
+    <Property Name="IS_LOCKED" Type="Boolean" />
+    <Property Name="EPSApplicable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="dtFinalSettlement" Type="DateTime" Precision="0" />
+    <Property Name="hiQual" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="Handicap" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="IFSCCODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="ESI_END_MONTH" Type="DateTime" Precision="3" />
+    <Property Name="BANK_BRANCH" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="SSID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="annualsalary" Type="Double" />
+    <Property Name="weekly_off1" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Passport_Date" Type="DateTime" Precision="3" />
+    <Property Name="IsTrgerFired" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ReasonForResign" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PersonalEmail" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Address_change_date" Type="DateTime" Precision="3" />
+    <Property Name="CTC_PERIOD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="created_date" Type="DateTime" Precision="3" />
+    <Property Name="created_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FNF_STATUS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NPS_APPLICABLE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NPS_PERCENTAGE" Type="Double" />
+    <Property Name="PortalAccessble" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="SwipeAttendance" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EmergencyRelation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ENCASHPROCESS">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+      <PropertyRef Name="MONTH" />
+    </Key>
+    <Property Name="EMP_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MONTH" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ENCASHMENT_DAYS" Type="Double" />
+    <Property Name="PREF1" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="PREF2" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="PREF3" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="DAYS_DEDUCT1" Type="Double" />
+    <Property Name="DAYS_DEDUCT2" Type="Double" />
+    <Property Name="DAYS_DEDUCT3" Type="Double" />
+    <Property Name="EPREF1" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="EPREF2" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="EPREF3" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="EDAYS_DEDUCT1" Type="Double" />
+    <Property Name="EDAYS_DEDUCT2" Type="Double" />
+    <Property Name="EDAYS_DEDUCT3" Type="Double" />
+    <Property Name="PAYPERIODSTART" Type="DateTime" Precision="0" />
+    <Property Name="PAYPERIODEND" Type="DateTime" Precision="0" />
+    <Property Name="ATTENSTART" Type="DateTime" Precision="0" />
+    <Property Name="ATTENEND" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="LEAVEAPPAPPROVAL">
+    <Key>
+      <PropertyRef Name="APPLICATION_NO" />
+      <PropertyRef Name="LEAVETYPE" />
+      <PropertyRef Name="DATE_FROM" />
+      <PropertyRef Name="DATE_TO" />
+      <PropertyRef Name="APPROVED" />
+    </Key>
+    <Property Name="APPLICATION_NO" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EMP_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="APPL_DATE" Type="DateTime" Precision="0" />
+    <Property Name="LEAVETYPE" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DATE_FROM" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DATE_TO" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="APPROVED" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="APPROVED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="APPROVED_BY" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MSGNO" Type="Double" />
+    <Property Name="REMARKS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AUTHORIZEDBY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HALF2ND" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="HALF1ST" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="MOD_CAN" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Attachment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RejectReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedBY" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyRemarks" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfDays" Type="Double" />
+    <Property Name="BulkApproved" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="App_Year" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Subordinates" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AutoInsert" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="LEAVEENCASHMENT">
+    <Key>
+      <PropertyRef Name="APP_NO" />
+      <PropertyRef Name="DATE1" />
+      <PropertyRef Name="EMP_ID" />
+      <PropertyRef Name="LEAVE_TYPE" />
+      <PropertyRef Name="ENCASHING_DAYS" />
+      <PropertyRef Name="REMARKS" />
+    </Key>
+    <Property Name="APP_NO" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DATE1" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EMP_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LEAVE_TYPE" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ENCASHING_DAYS" Type="Double" Nullable="false" />
+    <Property Name="APPROVED" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="APPROVEDBY" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REMARKS" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MONTHENCASHED" Type="DateTime" Precision="0" />
+    <Property Name="MSGNO" Type="Double" />
+    <Property Name="APPROVEDDATE" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="LEAVEGRADELINK">
+    <Key>
+      <PropertyRef Name="LEAVEID" />
+      <PropertyRef Name="GRADEID" />
+      <PropertyRef Name="EFFECTDATE" />
+    </Key>
+    <Property Name="LEAVEID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GRADEID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EFFECTDATE" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="LEAVEMASTER">
+    <Key>
+      <PropertyRef Name="LEAVE_ID" />
+      <PropertyRef Name="LEAVE_DESCRIPTION" />
+      <PropertyRef Name="ENCASHABLE" />
+      <PropertyRef Name="CARRY_FORWARD" />
+      <PropertyRef Name="YEARS" />
+      <PropertyRef Name="DAYS" />
+      <PropertyRef Name="ACC_BEFORE_PERIOD" />
+      <PropertyRef Name="ACC_AFTER_PERIOD" />
+      <PropertyRef Name="YEARLY" />
+      <PropertyRef Name="MONTHLY" />
+      <PropertyRef Name="NO_OF_DAYS" />
+      <PropertyRef Name="EFFECTDATE" />
+    </Key>
+    <Property Name="LEAVE_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LEAVE_DESCRIPTION" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ENCASHABLE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CARRY_FORWARD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YEARS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DAYS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DAYS_YEARS" Type="Double" />
+    <Property Name="ACC_BEFORE_PERIOD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ACC_AFTER_PERIOD" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YEARLY" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MONTHLY" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NO_OF_DAYS" Type="Double" Nullable="false" />
+    <Property Name="APPTO" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+    <Property Name="APPLICABLETO" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="APPLICABLE_TO" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="ELIGIBILITY" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="MIN_BAL_DAYS" Type="Double" />
+    <Property Name="MAX_ENCASH_DAYS" Type="Double" />
+    <Property Name="MIN_NO_OF_DAYS" Type="Double" />
+    <Property Name="MAX_NO_OF_DAYS" Type="Double" />
+    <Property Name="EFFECTDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MAX_LEAVE_MON" Type="Double" />
+    <Property Name="MAX_LEAVE_TIME" Type="Double" />
+    <Property Name="NEGA_LEAVE_ACCRUED" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="MIN_ENCDAYS_ACCRUED" Type="Double" />
+    <Property Name="LTID" Type="Double" />
+    <Property Name="PAIDLEAVE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="FORMULA" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ACC_ELIGIBILITY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ACC_CAL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ELIGIBILITY_DAYS" Type="Double" />
+    <Property Name="ACC_DAYS" Type="Double" />
+    <Property Name="ROUNDDAYS" Type="Double" />
+    <Property Name="PERDAY" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Embed" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="AutoEncash" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="accrualLimit" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="Quarterly" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Anniversary" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MAX_LEAVEAccept_MONTH" Type="Double" />
+    <Property Name="UploadDocument" Type="Boolean" />
+    <Property Name="DocumentReqDays" Type="Int32" />
+    <Property Name="CompOffExpDays" Type="Int32" />
+    <Property Name="CompOffUtiliseApproveFlag" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IsCompOffType" Type="Boolean" />
+    <Property Name="MinLeavesPerRequest" Type="Double" />
+    <Property Name="MaxLeavesPerRequest" Type="Double" />
+    <Property Name="MaxLeavesPerYear" Type="Double" />
+    <Property Name="LeavesCombinationAfter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DaysGapAfterLeave" Type="Double" />
+    <Property Name="Before15" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="After15" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="HalfYearly" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="IsMailReqForSecondManager" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="EMBED_PREFIX" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="EMBED_SUFFIX" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="linkLeaveLoc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LeaveID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LocID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EffectDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="MONTHEND_LEAVEBAL">
+    <Key>
+      <PropertyRef Name="MONTH" />
+      <PropertyRef Name="LEAVE_ID" />
+      <PropertyRef Name="START_CLOSE" />
+    </Key>
+    <Property Name="EMP_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MONTH" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LEAVE_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="START_CLOSE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="O_BAL" Type="Double" />
+    <Property Name="ACCRUED" Type="Double" />
+    <Property Name="UTILIZED" Type="Double" />
+    <Property Name="ENCASHED" Type="Double" />
+    <Property Name="AUTILIZED" Type="Double" />
+  </EntityType>
+  <EntityType Name="MONTHLYATTENDANCE">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+      <PropertyRef Name="MONTH" />
+      <PropertyRef Name="TOTAL_DAYS" />
+      <PropertyRef Name="NO_OF_WORKING_DAYS" />
+      <PropertyRef Name="DAYS_WORKED" />
+    </Key>
+    <Property Name="EMP_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MONTH" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TOTAL_DAYS" Type="Double" Nullable="false" />
+    <Property Name="NO_OF_WORKING_DAYS" Type="Double" Nullable="false" />
+    <Property Name="DAYS_WORKED" Type="Double" Nullable="false" />
+    <Property Name="SPECIAL_SHIFT" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="LATE_DAYS" Type="Double" />
+    <Property Name="OT_HOURS" Type="Double" />
+    <Property Name="LATE_DAYS1" Type="Double" />
+    <Property Name="LATE_DAYS2" Type="Double" />
+    <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="PUNCH_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="LOSS_OF_PAY" Type="Double" />
+    <Property Name="SHIFT_DAYS" Type="Double" />
+    <Property Name="EARLYDAYS1" Type="Double" />
+    <Property Name="EARLYDAYS2" Type="Double" />
+    <Property Name="EARLYDAYS3" Type="Double" />
+    <Property Name="LDEDUCTDAYS" Type="Double" />
+    <Property Name="EDEDUCTDAYS" Type="Double" />
+    <Property Name="NOJDEDUCTDAYS" Type="Double" />
+    <Property Name="LATEDAYSDEDUCT" Type="Double" />
+    <Property Name="EARLYDAYSDEDUCT" Type="Double" />
+    <Property Name="VERSIONFLAG" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="WOFFOTHRS" Type="Double" />
+    <Property Name="HOLOTHRS" Type="Double" />
+    <Property Name="WOFFDAYS" Type="Double" />
+    <Property Name="HOLIDAYS" Type="Double" />
+    <Property Name="PAY_TDAYS" Type="Double" />
+    <Property Name="STATUS" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="IncentiveHrs" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="LEAVES" Type="Double" />
+    <Property Name="UnpaidLeave" Type="Double" />
+  </EntityType>
+  <EntityType Name="OTCOFFHR">
+    <Key>
+      <PropertyRef Name="EMPID" />
+      <PropertyRef Name="DAY" />
+    </Key>
+    <Property Name="EMPID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DAY" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ACTUALHRS" Type="Double" />
+    <Property Name="BALHRS" Type="Double" />
+    <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PAYPERIODDEFINITION">
+    <Key>
+      <PropertyRef Name="PAY_CODE" />
+      <PropertyRef Name="PAY_FROMDATE" />
+    </Key>
+    <Property Name="PAY_CODE" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CLOSING_DATE" Type="Double" />
+    <Property Name="PAY_DATE" Type="Double" />
+    <Property Name="PAY_FROMDATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="SAL_DATE" Type="Double" />
+    <Property Name="ATTEN_DATE" Type="Double" />
+  </EntityType>
+  <EntityType Name="Payroll_LOG">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SelMonth" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="type1" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="server1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="database1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dbUName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dbPass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SelectedEmployees" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ByRef" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Source" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ANil_July_2018Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="COFFAPPROVALs" EntityType="Self.COFFAPPROVAL" />
+    <EntitySet Name="EMP_WEEKLYOFF" EntityType="Self.EMP_WEEKLYOFF" />
+    <EntitySet Name="EMPLOYEELEAVEDETAILS" EntityType="Self.EMPLOYEELEAVEDETAIL" />
+    <EntitySet Name="EMPLOYEEMASTERs" EntityType="Self.EMPLOYEEMASTER" />
+    <EntitySet Name="ENCASHPROCESSes" EntityType="Self.ENCASHPROCESS" />
+    <EntitySet Name="LEAVEAPPAPPROVALs" EntityType="Self.LEAVEAPPAPPROVAL" />
+    <EntitySet Name="LEAVEENCASHMENTs" EntityType="Self.LEAVEENCASHMENT" />
+    <EntitySet Name="LEAVEGRADELINKs" EntityType="Self.LEAVEGRADELINK" />
+    <EntitySet Name="LEAVEMASTERs" EntityType="Self.LEAVEMASTER" />
+    <EntitySet Name="linkLeaveLocs" EntityType="Self.linkLeaveLoc" />
+    <EntitySet Name="MONTHEND_LEAVEBAL" EntityType="Self.MONTHEND_LEAVEBAL" />
+    <EntitySet Name="MONTHLYATTENDANCEs" EntityType="Self.MONTHLYATTENDANCE" />
+    <EntitySet Name="OTCOFFHRS" EntityType="Self.OTCOFFHR" />
+    <EntitySet Name="PAYPERIODDEFINITIONs" EntityType="Self.PAYPERIODDEFINITION" />
+    <EntitySet Name="Payroll_LOG" EntityType="Self.Payroll_LOG" />
+  </EntityContainer>
+</Schema>

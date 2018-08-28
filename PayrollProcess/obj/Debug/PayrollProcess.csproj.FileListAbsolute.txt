@@ -1,0 +1,12 @@
+E:\PAYROLL\PayrollProcess\bin\Debug\PayrollProcess.dll
+E:\PAYROLL\PayrollProcess\bin\Debug\PayrollProcess.pdb
+E:\PAYROLL\PayrollProcess\bin\Debug\DataModel.dll
+E:\PAYROLL\PayrollProcess\bin\Debug\EntityFramework.dll
+E:\PAYROLL\PayrollProcess\bin\Debug\DataModel.pdb
+E:\PAYROLL\PayrollProcess\bin\Debug\DataModel.dll.config
+E:\PAYROLL\PayrollProcess\bin\Debug\EntityFramework.xml
+E:\PAYROLL\PayrollProcess\obj\Debug\PayrollProcess.csprojAssemblyReference.cache
+E:\PAYROLL\PayrollProcess\obj\Debug\PayrollProcess.csproj.CoreCompileInputs.cache
+E:\PAYROLL\PayrollProcess\obj\Debug\PayrollProcess.csproj.CopyComplete
+E:\PAYROLL\PayrollProcess\obj\Debug\PayrollProcess.dll
+E:\PAYROLL\PayrollProcess\obj\Debug\PayrollProcess.pdb
