@@ -9,30 +9,56 @@ namespace PayrollProcess
 {
     public class Payroll
     {
-        private bool isWeeklyOff(DateTime pdate, ref object prsEmp)
+        private bool isWeeklyOff(DateTime pdate, EMP_WEEKLYOFF empWeekOff)
         {
             int iWeek;
             int iWeekDay;
+            int dayOfWeek = 0;
+            bool isWeeklyOff = false;
+
             iWeek = pdate.Day / 7 + 1;
-            //iWeekDay = pdate. - 1;
+            dayOfWeek = GetWeekDay();
+            iWeekDay = dayOfWeek - 1;
+            
+            if (iWeekDay == System.Convert.ToInt32(empWeekOff.WEEKLY_OFF1))
+            {
+                if (string.Compare(empWeekOff.WEEKLY_OFF1_DAYS, System.Convert.ToString(iWeek)) > 0)
+                {
+                    isWeeklyOff = true;
+                }
+            }
+            else if (iWeekDay == System.Convert.ToInt32(empWeekOff.WEEKLY_OFF2))
+            {
+                if (string.Compare(empWeekOff.WEEKLY_OFF2_DAYS, System.Convert.ToString(iWeek)) > 0)
+                {
+                    isWeeklyOff = true;
+                }
+            }
+            else
+                isWeeklyOff = false;
+            return isWeeklyOff;
 
-            //isWeeklyOff = false;
-            //if (prsEmp.EOF)
-            //    return;
-            //else if (iWeekDay == System.Convert.ToInt32(prsEmp.Weekly_Off1))
-            //{
-            //    if (InStr(prsEmp.Weekly_Off1_Days, System.Convert.ToString(iWeek)) > 0)
-            //        isWeeklyOff = true;
-            //}
-            //else if (iWeekDay == System.Convert.ToInt32(prsEmp.Weekly_Off2))
-            //{
-            //    if (InStr(prsEmp.Weekly_Off2_Days, System.Convert.ToString(iWeek)) > 0)
-            //        isWeeklyOff = true;
-            //}
-            //else
-            //    return;
-
-            return false;
+            int GetWeekDay()
+            {
+                //int dayOfWeek = 0;
+                if (pdate.DayOfWeek == DayOfWeek.Monday)
+                {
+                    dayOfWeek = 1;
+                }
+                if (pdate.DayOfWeek == DayOfWeek.Tuesday)
+                    dayOfWeek = 2;
+                if (pdate.DayOfWeek == DayOfWeek.Wednesday)
+                    dayOfWeek = 3;
+                if (pdate.DayOfWeek == DayOfWeek.Thursday)
+                    dayOfWeek = 4;
+                if (pdate.DayOfWeek == DayOfWeek.Friday)
+                    dayOfWeek = 5;
+                if (pdate.DayOfWeek == DayOfWeek.Saturday)
+                    dayOfWeek = 6;
+                if (pdate.DayOfWeek == DayOfWeek.Sunday)
+                    dayOfWeek = 7;
+                return dayOfWeek;
+            }
         }
 
         //private void autoEncashment(string psEID, ref ADODB.Recordset prsLeaveMaster, ref ADODB.Recordset prsLeaveApps, ref ADODB.Recordset prsLBal_S, ref ADODB.Recordset prsEncash, string psGradeID, string psLocID, DateTime pdtMonth)
